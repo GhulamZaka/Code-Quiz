@@ -10,14 +10,30 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
-  h1 {
+  .intro h2 {
       font-size: 50px;
       text-align: center;
       margin-top: 200px;
   }
 
-  .text {
+  .intro p {
       font-size: 30px;
       text-align: center;
-      padding-left: 40px;
+      padding-left: 60px;
+      padding-right: 60px;
+      display: flex;
+  }
+  .btn {
+      background-color: blueviolet;
+      font-size: 30px;
+      border-radius: 10px;
+      display: inline-block;
+      margin: 5%;
+      margin-left: 45%;
+      color: #ffffff;
+      padding: 10px 15px;
+  }
+  .score h3 {
+      size: 50px;
+
   }
