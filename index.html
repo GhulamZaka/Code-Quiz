@@ -12,8 +12,9 @@
 
     <!-- Header with high Score link and timer -->
     <header>
-      <a href="highscore.html">View High Score</a>
-      <div>Timer:</div>
+      <div class="highscore">
+        <a href="highscore.html">View High Score</a>
+      <h2 class="timer">Time: 0s</h2>
     </header>
     
     <!-- content -->
@@ -27,29 +28,37 @@
          <button id="start" class="btn">Start Quiz</button>
         </div>
         
-      <!-- Question section -->
-        <div id="quiz-page">
+      <!-- Questions section -->
+        <div id="quiz">
             <div id="question"></div>
             <div id="choices">
               <ul>
-                <li><button</li>
-                <li><button</li>
-
+                <li><button class="choice option-1 choice-button" id="1" onclick="checkAnswer('1')"></button></li>
+                <li><button class="choice option-2 choice-button" id="2" onclick="checkAnswer('2')"></button></li>
+                <li><button class="choice option-3 choice-button" id="3" onclick="checkAnswer('3')"></button></li>
+                <li><button class="choice option-4 choice-button" id="4" onclick="checkAnswer('4')"></button></li>
               </ul>
             </div>
+
+             <!-- Answers -->
+            <div id="answer"></div>
+
         </div>
-     
 
+        <!-- Score and initial page -->
+        <div id="finalscore">
+          <h2 class="message">All done!</h2>
+          <div id="result"></div>
 
+          <!-- initial form -->
+          <form>
+            
+          </form>
 
-
-      
+        </div>
       
     </section>
 
-
-
-      
     <script src="./assets/js/script.js"></script>
 
 </body>
