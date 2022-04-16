@@ -34,7 +34,7 @@ choice4 : "4. square brackets",
 correct : "2"
 },
 
-{question: "arrays in JavaScript can be used to store___________.",
+{question: "Arrays in JavaScript can be used to store___________.",
 choice1 : "1. numbers and strings",
 choice2 : "2. other arrays",
 choice3 : "3. booleans",
@@ -93,3 +93,21 @@ function renderQuestion() {
     choice4.innerHTML = q.choice4;
 };
 
+// check answers
+function checkAnswer(answer) {
+if(questions[runningQuestionIndex].correct == answer) {
+    answer.textContent = "Correct!"
+}
+else {
+    answer.textContent = "Wrong!"
+    
+}
+
+if (questions.lenght === runningQuestionIndex+1) {
+    resultRender();
+    return;
+    
+}
+runningQuestionIndex++;
+renderQuestion();
+};

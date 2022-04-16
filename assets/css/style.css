@@ -14,8 +14,8 @@
   /* header style */
 
   #header {
-      margin-top: 0;
-      display: block;
+      margin-top: 20px;
+      
   }
 
   .highscore a {
@@ -58,23 +58,37 @@
   }
   
 /* question section style */
-#quiz-page {
-    margin: 100px;
-    margin-left: 40%;
+#quiz {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 200px;
 }
 
 #question {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: left;
-}
+    font-size: 40px;
+      text-align: left;
+      margin-left: 15%;
+      margin-right: 15%;
+      display: flex;
+      font-weight: bold;
+  }
 
 ul {
     list-style: none;
 }
 
-#choices {
-
-
+.button {
+    background-color: blueviolet;
+    font-size: 20px;
+    border-radius: 10px;
+    display: flex;
+    text-align: left;
+    margin: 10px;
+    margin-left: 15%;
+    color: #ffffff;
+    padding: 10px 15px;
 }
+.button:hover {
+    background-color: #d66bbb;
+} 
 
