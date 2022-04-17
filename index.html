@@ -41,21 +41,23 @@
             </div>
 
              <!-- Answers -->
-            <div id="answer"></div>
+            <div id="answers" class="answers" ></div>
 
         </div>
 
-        <!-- Score and initial page -->
-        <div id="finalscore">
-          <h2 class="message">All done!</h2>
-          <div id="result"></div>
-
-          <!-- initial form -->
-          <form>
-            
-          </form>
-
-        </div>
+        <!---Score Info-->
+            <div id="finalscore" class="finalscore">
+                <h2 id="endMessage">All done!</h2>
+                <div id="result"></div>
+                 <!---Form to enter initials-->
+                 <form >
+                    <div id="initials">
+                        <label for="users" id="name">Enter Initials:</label>
+                        <input type="text" id="contactInfo">
+                        <input type="button" id= "userInfo" class="submitBtn" onclick="location.href='highscore.html';" value="Submit" />
+                    </div>
+                </form>
+            </div>
       
     </section>
 
