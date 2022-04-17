@@ -117,7 +117,7 @@ function renderQuestion() {
 
 // check answers
 function checkAnswer(answers) {
-if(questions[runningQuestionIndex].correct == answers) {
+if(questions[runningQuestionIndex].correct === answers) {
     answer.innerHTML = "Correct!"
 }
 else {
@@ -125,7 +125,7 @@ else {
     timeLeft -=10;
 }
 
-if (questions.length === runningQuestionIndex+1) {
+if (questions.length === runningQuestionIndex +1) {
     resultRender();
     return;
 }
@@ -147,11 +147,12 @@ function resultRender() {
 
  //Capture Score and Initials 
 userInfo.addEventListener("click", function() {
+
     var contactInfo = document.getElementById("contactInfo").value;
 
-    localStorage.setItem("contactInfo", JSON.stringify (contactInfo));
+    localStorage.setItem("contactInfo", JSON.stringify(contactInfo));
     localStorage.setItem("timeLeft", JSON.stringify(timeLeft));
     
-    loadScores();
+   
     });
 
