@@ -69,16 +69,36 @@ finalScore.style.display = "none";
 startbtn.addEventListener("click", startQuiz);
 
 
-// start Quiz
+// Timer Function Begin
+var timeLeft = 75;
+var startScore = 0;
+var timer = document.getElementById("timer");
 
+timer.innerHTML = "Time: " + startScore + "s";
+
+// start Quiz
 function startQuiz() {
     quiz.style.display = "block";
     question.style.display = "block";
     intropage.style.display = "none";
     finalScore.style.display = "none";
 
+
+    var timeInterval = setInterval(function() {
+        timer.innerHTML = "Time:" + timeLeft + "s";
+        timeLeft-=1;
+
+        if(timeLeft === 0 || questions.length === runningQuestionIndex+1)  {
+            resultRender();
+            clearInterval(timeInterval);
+            timer.innerHTML = "Time:" + timeLeft + "s";
+         }
+    }, 1000);
+
     renderQuestion();
 };
+
+
 
 // Display Questions 
 var lastQuestionIndex = questions.length -1;
@@ -97,18 +117,19 @@ function renderQuestion() {
 
 // check answers
 function checkAnswer(answers) {
-if(questions[runningQuestionIndex].correct === answers) {
+if(questions[runningQuestionIndex].correct == answers) {
     answer.innerHTML = "Correct!"
 }
 else {
     answer.innerHTML = "Wrong!" 
+    timeLeft -=10;
 }
-runningQuestionIndex++;
-if (questions.length === runningQuestionIndex) {
+
+if (questions.length === runningQuestionIndex+1) {
     resultRender();
     return;
 }
-
+runningQuestionIndex++;
 renderQuestion();
 };
 
@@ -118,8 +139,12 @@ function resultRender() {
     intropage.style.display = "none";
     finalScore.style.display = "block";
 
+
+    if (timeLeft === 0 || questions.length -1) { 
+        result.innerHTML = "Your final score is " + timeLeft + ".";
+       }
  };
- 
+
  //Capture Score and Initials 
 userInfo.addEventListener("click", function() {
     var contactInfo = document.getElementById("contactInfo").value;
