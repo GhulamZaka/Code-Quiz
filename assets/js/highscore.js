@@ -7,5 +7,12 @@ clearBtn.addEventListener("click", function() {
 
 // retrieve data from local storage.
 
-document.getElementById("showhighscore").innerHTML = localStorage.getItem("contactInfo");
-document.getElementById("showhighscore").innerHTML = localStorage.getItem("timeLeft");
+var gmz = document.getElementById("showhighscore");
+
+
+gmz.innerHTML = localStorage.getItem("contactInfo");
+document.getElementById("timeLeft").innerHTML = localStorage.getItem("timeLeft");
+
+
+
+
