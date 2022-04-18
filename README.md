@@ -17,6 +17,10 @@
 
 ## The URL of the GitHub repository
 
-
+https://github.com/GhulamZaka/Code-Quiz
 
 ## ScreenShots
+
+<img src="./assets/images/a1.jpg" />
+<img src="./assets/images/a2.jpg" />
+<img src="./assets/images/a4.jpg" />
