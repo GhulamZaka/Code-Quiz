@@ -12,7 +12,7 @@
 
 ## The URL of the functional, deployed application
 
-
+https://ghulamzaka.github.io/Code-Quiz/
 
 
 ## The URL of the GitHub repository

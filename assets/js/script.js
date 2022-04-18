@@ -153,6 +153,5 @@ userInfo.addEventListener("click", function() {
     localStorage.setItem("contactInfo", JSON.stringify(contactInfo));
     localStorage.setItem("timeLeft", JSON.stringify(timeLeft));
     
-    loadScores();
     });
 
